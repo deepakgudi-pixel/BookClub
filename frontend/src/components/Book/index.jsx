@@ -3,6 +3,7 @@ import { AppContext } from '../../utils/contextApi/contextApi';
 import { Author, Container, Cover, Title } from './styles';
 
 export default function Book() {
+    
   const { bookData, baseUrl } = useContext(AppContext);
 
   console.log('bookData: ', bookData);
@@ -24,7 +25,7 @@ export default function Book() {
         {poster && <Cover src={`${baseUrl}${poster?.data?.attributes?.url}`} />}
         <figcaption>
           <Title>{bookName?.data?.attributes?.Name}</Title>
-          <Author>{author?.data?.attributes?.Name}</Author>
+          <Author>by {author?.data?.attributes?.Name}</Author>
         </figcaption>
       </Container>
     );
