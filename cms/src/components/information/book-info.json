@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_information_book_infos",
+  "info": {
+    "displayName": "BookInfo",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "poster": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "bookName": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::book.book"
+    },
+    "published": {
+      "type": "string"
+    }
+  }
+}
